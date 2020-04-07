@@ -1,10 +1,15 @@
 {
-    "nombreApp" : "Componentes",
+    "nombreApp" : "ViuSQV",
     "rutas" : [
         {
-            "ruta" : "construction",
-            "icon" : "add_alert",
-            "texto": "En construccion"
+            "ruta" : "ayuntamiento",
+            "image" : "https://es.vortal.biz/sites/default/files/vortal_ayto_santquirze.jpg",
+            "texto": "Ayuntamiento"
+        },
+        {
+            "ruta" : "deporte",
+            "image" : "https://www.publicdomainpictures.net/pictures/20000/velka/balloons-and-balls.jpg",
+            "texto": "Deporte"
         }
     ]
 }

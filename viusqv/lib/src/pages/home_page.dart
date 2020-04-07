@@ -22,7 +22,12 @@ class HomePage extends StatelessWidget {
       initialData: [],
       builder: ( context, AsyncSnapshot<List<dynamic>> snapshot){
 
-        return ListView(
+        return GridView.count(
+          crossAxisCount: 2,
+          childAspectRatio: 1.0,
+          padding: const EdgeInsets.all(4.0),
+          mainAxisSpacing: 4.0,
+          crossAxisSpacing: 4.0,
           children: _listaItems( snapshot.data, context ),
         );
 
@@ -37,21 +42,38 @@ class HomePage extends StatelessWidget {
     
     data.forEach((opt){
       
-      final widgetTemo = ListTile(
-        title: Text(opt['texto']),
-        leading: getIcon(opt['icon']),
-        trailing: Icon(Icons.keyboard_arrow_right, color: Colors.blue),
-        onTap: () {
-          
-          Navigator.pushNamed(context, opt['ruta']);
-
-        },
+      final widgetTemo = GridTile(
+        child: GestureDetector(
+          child: Card(
+            elevation: 5.0,
+            child: Container(
+              decoration: BoxDecoration(
+                image: new DecorationImage(
+                  image: NetworkImage(opt['image']),
+                  fit: BoxFit.fill,
+              
+                ),
+              ),
+              child: Center(
+                child: Text(
+                  opt['texto'],
+                  style: TextStyle(
+                    fontSize: 30.0,
+                    color: Colors.green,
+                  ),
+                )
+              )
+            ),
+          ),
+          onTap: () {
+            Navigator.pushNamed(context, opt['ruta']);
+          },
+        )
       );
-
-      opciones..add(widgetTemo)
-              ..add(Divider());
-
-    });
+      
+      opciones..add(widgetTemo);
+    
+    });  
 
     return opciones;
   }
