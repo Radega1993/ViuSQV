@@ -1,0 +1,10 @@
+{
+    "nombreApp" : "Componentes",
+    "rutas" : [
+        {
+            "ruta" : "construction",
+            "icon" : "add_alert",
+            "texto": "En construccion"
+        }
+    ]
+}

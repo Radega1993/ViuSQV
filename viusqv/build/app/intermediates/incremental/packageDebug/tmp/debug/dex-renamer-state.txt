@@ -1,0 +1,4 @@
+#Tue Apr 07 13:43:12 CEST 2020
+base.0=/home/raul/proyectos/flutter/ViuSQV/viusqv/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
